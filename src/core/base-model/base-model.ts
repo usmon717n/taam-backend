@@ -1,12 +1,17 @@
-import {BaseEntity, CreateDateColumn, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm";
+import {
+  BaseEntity,
+  CreateDateColumn,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
-export class BaseModel extends BaseEntity{
-    @PrimaryGeneratedColumn()
-    id!:number
+export class BaseModel extends BaseEntity {
+  @PrimaryGeneratedColumn()
+  id!: number;
 
-    @CreateDateColumn()
-    createdAt!:Date
+  @CreateDateColumn()
+  createdAt!: Date;
 
-    @UpdateDateColumn({nullable:true})
-    updatedAt?:Date
+  @UpdateDateColumn({ nullable: true })
+  updatedAt?: Date;
 }
